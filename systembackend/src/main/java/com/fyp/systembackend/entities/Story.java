@@ -9,30 +9,27 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-@Table(name = "ACTIVITY")
+@Table(name = "STORY")
 @Entity
-public class Activity {
+public class Story {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	
-	@Column(name = "ACTIVITY_TITLE")
+	@Column(name = "STORY_TITLE")
 	private String title;
 	
-	@Column(name = "ACTIVITY_DATE")
+	@Column(name = "STORY_DATE")
 	private Date date;
 	
-	@Column(name = "ACTIVITY_TIME")
-	private String time;
-	
-	@Column(name = "ACTIVITY_LOCATION")
+	@Column(name = "STORY_LOCATION")
 	private String location;
 	
-	@Column(name = "ACTIVITY_CATEGORY")
+	@Column(name = "STORY_CATEGORY")
 	private String category;
 	
-	@Column(name = "ACTIVITY_DESCRIPTION")
+	@Column(name = "STORY_DESCRIPTION")
 	private String description;
 	
 	public long getId() {
@@ -52,12 +49,6 @@ public class Activity {
 	}
 	public void setDate(Date date) {
 		this.date = date;
-	}
-	public String getTime() {
-		return time;
-	}
-	public void setTime(String time) {
-		this.time = time;
 	}
 	public String getLocation() {
 		return location;

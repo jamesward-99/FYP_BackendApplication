@@ -16,17 +16,17 @@ import com.fyp.systembackend.repository.UserDetailsRepository;
 
 @SpringBootApplication
 public class SystembackendApplication {
-
+/*
 	@Autowired
 	private PasswordEncoder passwordEncoder;
 	
 	@Autowired
 	private UserDetailsRepository userDetailsRepository;
-	
+*/
 	public static void main(String[] args) {
 		SpringApplication.run(SystembackendApplication.class, args);
 	}
-
+/*
 	@PostConstruct
 	protected void init() {
 		
@@ -53,5 +53,6 @@ public class SystembackendApplication {
 		authority.setRoleCode(roleCode);
 		authority.setRoleDescription(roleDescription);
 		return authority;
-	}
+	} 
+*/
 }
