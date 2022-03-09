@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -31,4 +32,9 @@ public class ActivityController {
 	public List<Activity> getAllActivities(){
 		return activityService.getAllActivities();
 	}
+	
+	@RequestMapping(value="/{id}")
+	public Activity getActivity(@PathVariable String id) {
+		return activityService.getActivity(id);
+	}	
 }

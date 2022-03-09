@@ -23,4 +23,13 @@ public class ActivityServiceImpl implements ActivityService {
 	public List<Activity> getAllActivities() {
 		return activityRepository.findAll();
 	}
+	
+	@Override
+	public Activity getActivity(String id) {
+		Activity activity = activityRepository.findAll().stream()
+				.filter(a -> id.equals(a.getId()))
+				.findFirst()
+				.orElse(null);
+		return activity;
+	}
 }

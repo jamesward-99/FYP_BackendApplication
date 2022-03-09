@@ -1,7 +1,5 @@
 package com.fyp.systembackend.entities;
 
-import java.util.Date;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -15,13 +13,13 @@ public class Story {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long id;
+	private String id;
 	
 	@Column(name = "STORY_TITLE")
 	private String title;
 	
 	@Column(name = "STORY_DATE")
-	private Date date;
+	private String date;
 	
 	@Column(name = "STORY_LOCATION")
 	private String location;
@@ -32,10 +30,10 @@ public class Story {
 	@Column(name = "STORY_DESCRIPTION")
 	private String description;
 	
-	public long getId() {
-		return id;
+	public String getId() {
+		return id; 
 	}
-	public void setId(long id) {
+	public void setId(String id) { 
 		this.id = id;
 	}
 	public String getTitle() {
@@ -44,10 +42,10 @@ public class Story {
 	public void setTitle(String title) {
 		this.title = title;
 	}
-	public Date getDate() {
+	public String getDate() { // Date changed to String
 		return date;
 	}
-	public void setDate(Date date) {
+	public void setDate(String date) { // Date changed to String
 		this.date = date;
 	}
 	public String getLocation() {
