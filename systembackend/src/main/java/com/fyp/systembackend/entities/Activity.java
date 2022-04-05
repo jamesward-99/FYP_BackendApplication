@@ -13,13 +13,13 @@ public class Activity {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private String id; // int changed to String
+	private String id; 
 	
 	@Column(name = "ACTIVITY_TITLE")
 	private String title;
 	
 	@Column(name = "ACTIVITY_DATE")
-	private String date; // Date changed to String
+	private String date; 
 	
 	@Column(name = "ACTIVITY_TIME")
 	private String time;
@@ -42,9 +42,7 @@ public class Activity {
 	public String getTitle() {
 		return title;
 	}
-	public void setTitle(String title) {
-		this.title = title;
-	}
+
 	public String getDate() {
 		return date; // Date changed to String
 	}

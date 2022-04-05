@@ -8,4 +8,5 @@ public interface ActivityService {
 	public Activity saveActivity(Activity activity);
 	public List<Activity> getAllActivities();
 	public Activity getActivity(String id);
+	public Activity updateActivity(Activity activity);
 }

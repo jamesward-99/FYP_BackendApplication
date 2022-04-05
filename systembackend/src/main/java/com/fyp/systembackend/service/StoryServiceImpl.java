@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
 import com.fyp.systembackend.entities.Story;
 import com.fyp.systembackend.repository.StoryRepository;
 
@@ -21,5 +22,14 @@ public class StoryServiceImpl implements StoryService {
 	@Override
 	public List<Story> getAllStories() {
 		return storyRepository.findAll();
+	}
+	
+	@Override
+	public Story getStory(String id) {
+		Story story = storyRepository.findAll().stream()
+				.filter(a -> id.equals(a.getId()))
+				.findFirst()
+				.orElse(null);
+		return story;
 	}
 }

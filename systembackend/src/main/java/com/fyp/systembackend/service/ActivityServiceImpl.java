@@ -32,4 +32,9 @@ public class ActivityServiceImpl implements ActivityService {
 				.orElse(null);
 		return activity;
 	}
+
+	@Override
+	public Activity updateActivity(Activity activity) {
+		return activityRepository.save(activity);
+	}
 }
