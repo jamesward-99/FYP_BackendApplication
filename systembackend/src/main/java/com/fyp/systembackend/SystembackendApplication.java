@@ -1,18 +1,18 @@
 package com.fyp.systembackend;
 
-import java.util.ArrayList;
-import java.util.List;
+//import java.util.ArrayList;
+//import java.util.List;
 
-import javax.annotation.PostConstruct;
+//import javax.annotation.PostConstruct;
 
-import org.springframework.beans.factory.annotation.Autowired;
+//import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.security.crypto.password.PasswordEncoder;
+//import org.springframework.security.crypto.password.PasswordEncoder;
 
-import com.fyp.systembackend.entities.Authority;
-import com.fyp.systembackend.entities.User;
-import com.fyp.systembackend.repository.UserDetailsRepository;
+//import com.fyp.systembackend.entities.Authority;
+//import com.fyp.systembackend.entities.User;
+//import com.fyp.systembackend.repository.UserDetailsRepository;
 
 @SpringBootApplication
 public class SystembackendApplication {

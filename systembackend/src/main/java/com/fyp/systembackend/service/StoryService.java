@@ -8,4 +8,5 @@ public interface StoryService {
 	public Story saveStory(Story story);
 	public List<Story> getAllStories();
 	public Story getStory(String id);
+	public Story updateStory(Story story);
 }

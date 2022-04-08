@@ -1,7 +1,11 @@
 package com.fyp.systembackend.controllers;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,5 +26,15 @@ public class ProfileController {
 	public String add(@RequestBody Profile profile) {
 		profileService.saveActivity(profile);
 		return "Profile Added!";
+	}	
+	
+	@GetMapping("/getAllProfiles")
+	public List<Profile> getAllProfiles(){
+		return profileService.getAllProfiles();
+	}
+	
+	@RequestMapping(value="/{id}")
+	public Profile getProfile(@PathVariable String id) {
+		return profileService.getProfile(id);
 	}	
 }

@@ -32,4 +32,9 @@ public class StoryServiceImpl implements StoryService {
 				.orElse(null);
 		return story;
 	}
+	
+	@Override
+	public Story updateStory(Story story) {
+		return storyRepository.save(story);
+	}
 }
